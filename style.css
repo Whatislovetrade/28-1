@@ -40,6 +40,14 @@
     padding: 20px;
   }
 
+  .start {
+    cursor: pointer;
+  }
+
+  .title-start:hover {
+    background-color: rgb(25, 255, 25);
+  }
+
   .input-group {
     max-width: 300px;
     display: flex;

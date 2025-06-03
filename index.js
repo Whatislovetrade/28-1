@@ -2,6 +2,23 @@ window.addEventListener("DOMContentLoaded", () => {
 
     let draggedItem = null;
     const allListItem = document.querySelectorAll('li')
+    const start = document.querySelector('#start')
+    const inputGroup = document.querySelector('.input-group')
+
+    function showInput() {
+        inputGroup.style.display = 'none'
+
+        start.addEventListener('click', () => {
+            inputGroup.style.display = 'flex'
+        })
+    }
+
+    function hideInput() {
+        inputGroup.style.display = 'none'
+    }
+
+    showInput()
+
 
     function addTrashBox(items) {
         if (!Array.isArray(items) && !items.forEach) {
@@ -84,6 +101,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
             input.value = "";
             task = "";
+            hideInput()
         });
     }
 
